@@ -25,23 +25,29 @@ justify-content: space-between;
 align-items: center;
 }
 
-.btn-container{
+.btn-container {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 50px 0 160px 0;
+    padding: 50px 0;
+    max-width: 100%;
+    box-sizing: border-box;
 }
-.btn-container .btn{
+
+.btn-container .btn {
     background: #fe2f6d;
-    border: none ;
+    border: none;
     padding: 20px 50px;
-    margin: 0px 0 0 10px;
+    margin: 10px;
     color: #fff;
     font-weight: 400;
     font-size: x-large;
     border-radius: 7px;
-    cursor:pointer;
+    cursor: pointer;
+    flex-grow: 1;
+    max-width: 300px;
 }
+
 
 .wrapper .text-container h1{
     font-size: 5rem;
@@ -74,3 +80,31 @@ align-items: center;
 .btn:active{
    padding: 18px 48px;
 }
+
+@media only screen and (max-width: 900px) {
+    .wrapper .text-container h1{
+    font-size: 3.8rem ; 
+    text-align: center;
+   }
+
+   .wrapper .text-container h2{
+    font-size: 1.4rem ; 
+    text-align: center;
+   }
+
+   div.wrapper{
+    width: 75%;
+   }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .btn-container .btn{
+        padding: 10px 20px
+    }
+
+    div.wrapper{
+        width: 90%;
+        height: 80%;
+        padding: 30px;
+       }
+  }
